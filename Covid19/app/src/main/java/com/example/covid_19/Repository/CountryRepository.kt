@@ -10,7 +10,7 @@ class RequestCountry(
 ){
 
     fun getCountry(country:String){
-        val  call = CovidApiService.ClientApi.managersApi().getByCountrie(country)
+        val  call = CovidApiService.ClientApi.managersApi().getByCountries(country)
         val  callBack = GenericCallBack(success, failure)
         call.enqueue(callBack);
     }
