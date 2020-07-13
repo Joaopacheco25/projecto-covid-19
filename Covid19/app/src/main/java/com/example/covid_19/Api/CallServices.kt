@@ -4,6 +4,7 @@ import com.example.covid_19.Entity.Countries
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
+import retrofit2.http.Query
 
 interface CallServices {
 
@@ -11,5 +12,5 @@ interface CallServices {
     fun get():Call<List<Countries>>
 
     @GET(Constant.URL_BY_COUNTRY)
-    fun getByCountrie(@Path("country") country: String):Call<Countries>
+    fun getByCountries(@Query("country") country: String):Call<Countries>
 }
