@@ -8,7 +8,7 @@ import retrofit2.http.Query
 
 interface CallServices {
 
-    @GET(Constant.BASE_URL)
+    @GET(Constant.SUMMARY_URL)
     fun get():Call<List<Countries>>
 
     @GET(Constant.URL_BY_COUNTRY)
