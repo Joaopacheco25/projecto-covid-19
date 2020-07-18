@@ -1,6 +1,7 @@
 package com.example.covid_19.Api
 import com.example.covid_19.Constants.Constant
 import com.example.covid_19.Entity.Countries
+import com.example.covid_19.Entity.Covid
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path

@@ -18,7 +18,6 @@ data class Global(
 )
 
 data class Countries(
-
     val Country:String,
     val NewConfirmed :Int,
     val TotalConfirmed: Int,
