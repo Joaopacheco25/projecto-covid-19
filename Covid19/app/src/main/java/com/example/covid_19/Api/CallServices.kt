@@ -12,6 +12,9 @@ interface CallServices {
     @GET(Constant.SUMMARY_URL)
     fun get():Call<List<Countries>>
 
+    @GET(Constant.SUMMARY_URL)
+    fun getCovid():Call<Covid>
+
     @GET(Constant.URL_BY_COUNTRY)
     fun getByCountries(@Query("country") country: String):Call<Countries>
 }
