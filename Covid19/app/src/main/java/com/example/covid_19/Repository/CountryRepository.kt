@@ -3,9 +3,10 @@ package com.example.covid_19.Repository
 import com.example.covid_19.Api.CovidApiService
 import com.example.covid_19.Api.GenericCallBack
 import com.example.covid_19.Entity.Countries
+import com.example.covid_19.Entity.Covid
 
 class RequestCountry(
-    private val success:(Countries) -> Unit,
+    private val success:(Covid) -> Unit,
     private val failure:(Throwable) -> Unit
 ){
 
