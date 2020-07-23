@@ -1,17 +1,17 @@
-package com.example.covid_19.Api
+package com.example.covid19.api
 
-import com.example.covid_19.Constants.Constant
+import com.example.covid19.constants.Constant
 import okhttp3.logging.HttpLoggingInterceptor
 import com.google.gson.Gson
 import okhttp3.OkHttpClient
-import retrofit2.Call
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.Retrofit
 
-class CovidApiService {
+
      object ClientApi {
 
-         private val retrofit: Retrofit = retrofit()
+         private val retrofit: Retrofit =
+             retrofit()
 
          private fun logging(): HttpLoggingInterceptor {
              return HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
@@ -32,7 +32,7 @@ class CovidApiService {
          }
 
          fun managersApi(): CallServices {
-             return retrofit.create(CallServices::class.java)
+             return retrofit.create(
+                 CallServices::class.java)
          }
     }
-}

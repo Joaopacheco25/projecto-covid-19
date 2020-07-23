@@ -1,4 +1,4 @@
-package com.example.covid_19.Constants
+package com.example.covid19.constants
 
 interface Constant  {
     companion object {

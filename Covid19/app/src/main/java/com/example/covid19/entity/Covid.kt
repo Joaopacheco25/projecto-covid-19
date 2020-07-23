@@ -1,4 +1,4 @@
-package com.example.covid_19.Entity
+package com.example.covid19.entity
 
 import java.util.*
 import kotlin.collections.ArrayList

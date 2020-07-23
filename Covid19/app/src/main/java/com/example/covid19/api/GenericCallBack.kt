@@ -1,25 +1,25 @@
-package com.example.covid_19.Api
+package com.example.covid19.api
 
 import retrofit2.Call
 import retrofit2.Response
 import retrofit2.Callback
 import java.lang.IllegalStateException
 
-class GenericCallBack<T>(
+class GenericCallback<T>(
     private val success: (T) -> Unit,
     private val failure: (Throwable) -> Unit
-):Callback<T>{
+) : Callback<T>{
 
     override fun onResponse(call: Call<T>, response: Response<T>) {
-        if (response.isSuccessful){
+        if (response.isSuccessful) {
             onResponseSuccess(response.body())
-        }else{
-            failure(IllegalStateException(response.message()))
+        } else {
+            failure(IllegalStateException("Response is not successful"))
         }
     }
 
     override fun onFailure(call: Call<T>, t: Throwable) {
-        failure(t);
+        failure(t)
     }
 
     private fun onResponseSuccess(result: T?) {

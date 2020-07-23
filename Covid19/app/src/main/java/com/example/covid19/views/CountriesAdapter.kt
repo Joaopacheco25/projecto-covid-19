@@ -1,12 +1,12 @@
-package com.example.covid_19.Views
+package com.example.covid19.views
 
 import android.view.LayoutInflater
 import android.widget.TextView
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.covid_19.R
-import com.example.covid_19.ViewModel.CountryViewModel
+import com.example.covid19.R
+import com.example.covid19.viewModel.CountryViewModel
 
 
 class CountriesAdapter():RecyclerView.Adapter<CoutriesViewHolder>(){
