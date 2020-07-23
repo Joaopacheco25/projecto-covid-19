@@ -1,11 +1,12 @@
 package com.example.covid_19.Entity
 
 import java.util.*
+import kotlin.collections.ArrayList
 
 
 data class Covid(
-    val global: Global,
-    val countries :List<Countries>
+    val Global: Global,
+    val Countries :ArrayList<Countries>
 )
 
 

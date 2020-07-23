@@ -4,11 +4,11 @@ import com.google.gson.annotations.SerializedName
 
 data class CountryViewModel(
     @SerializedName("Country") val country : String,
-    @SerializedName("CountryCode") val countryCode : String,
     @SerializedName("NewConfirmed") val newConfirmed : Int,
-    @SerializedName("TotalConfirmed") val totalConfirmed : Int,
-    @SerializedName("NewDeaths") val newDeaths : Int,
-    @SerializedName("TotalDeaths") val totalDeaths : Int,
-    @SerializedName("NewRecovered") val newRecovered : Int,
-    @SerializedName("TotalRecovered") val totalRecovered : Int
+    @SerializedName("CountryCode") val countryCode : String? = null,
+    @SerializedName("TotalConfirmed") val totalConfirmed : Int? = null,
+    @SerializedName("NewDeaths") val newDeaths : Int? = null,
+    @SerializedName("TotalDeaths") val totalDeaths : Int?= null,
+    @SerializedName("NewRecovered") val newRecovered : Int?= null,
+    @SerializedName("TotalRecovered") val totalRecovered : Int?= null
 )
