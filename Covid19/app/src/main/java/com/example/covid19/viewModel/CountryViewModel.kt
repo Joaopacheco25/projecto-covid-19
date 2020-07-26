@@ -1,13 +1,11 @@
 package com.example.covid19.viewModel
 
+import java.util.*
 
 data class CountryViewModel(
-    val country : String,
-    val newConfirmed : Int,
-    val countryCode : String? = null,
-    val totalConfirmed : Int? = null,
-    val newDeaths : Int? = null,
-    val totalDeaths : Int?= null,
-    val newRecovered : Int?= null,
-    val totalRecovered : Int?= null
+    val confirmed: Int,
+    val deaths: Int,
+    val recovered: Int,
+    val active: Int,
+    val date: String
 )
