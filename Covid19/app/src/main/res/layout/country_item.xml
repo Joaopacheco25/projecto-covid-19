@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/title_confirmed"
+                style="?attr/textAppearanceHeadline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Confirmed: "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/country_new_confirmed"
+                style="?attr/textAppearanceHeadline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/title_confirmed"
+                tools:ignore="MissingConstraints"
+                tools:text="10" />
+
+            <TextView
+                android:id="@+id/title_deaths"
+                style="?attr/textAppearanceHeadline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Deaths: "
+                app:layout_constraintTop_toBottomOf="@+id/title_confirmed"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/country_deaths"
+                style="?attr/textAppearanceHeadline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/title_deaths"
+                app:layout_constraintTop_toBottomOf="@+id/country_new_confirmed"
+                tools:ignore="MissingConstraints"
+                tools:text="10" />
+
+            <TextView
+                android:id="@+id/title_recovered"
+                style="?attr/textAppearanceHeadline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Recovered: "
+                app:layout_constraintTop_toBottomOf="@+id/title_deaths"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/country_recovered"
+                style="?attr/textAppearanceHeadline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/title_recovered"
+                app:layout_constraintTop_toBottomOf="@+id/title_deaths"
+                tools:ignore="MissingConstraints"
+                tools:text="10" />
+
+            <TextView
+                android:id="@+id/title_active"
+                style="?attr/textAppearanceHeadline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Active: "
+                app:layout_constraintTop_toBottomOf="@+id/title_recovered"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/country_active"
+                style="?attr/textAppearanceHeadline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/title_active"
+                app:layout_constraintTop_toBottomOf="@+id/title_recovered"
+                tools:ignore="MissingConstraints"
+                tools:text="10" />
+
+
+            <TextView
+                android:id="@+id/title_date"
+                style="?attr/textAppearanceHeadline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Date: "
+                app:layout_constraintTop_toBottomOf="@+id/title_active"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/country_date"
+                style="?attr/textAppearanceHeadline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/title_active"
+                app:layout_constraintTop_toBottomOf="@+id/title_active"
+                tools:ignore="MissingConstraints"
+                tools:text="10" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>
