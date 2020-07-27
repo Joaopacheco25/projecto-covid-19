@@ -15,6 +15,7 @@ data class Global(
     val TotalConfirmed:Int,
     val NewDeaths:Int,
     val TotalDeaths:Int,
+    val NewRecovered:Int,
     val TotalRecovered:Int
 )
 

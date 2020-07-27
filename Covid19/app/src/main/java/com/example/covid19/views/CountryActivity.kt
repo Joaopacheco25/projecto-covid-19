@@ -42,9 +42,7 @@ class CountryActivity : AppCompatActivity() {
             }
 
         )
-
         requestCountries.getCountry(countryName)
-
     }
 
     private fun toCountryViewModelList(country: Country): List<CountryViewModel> {
