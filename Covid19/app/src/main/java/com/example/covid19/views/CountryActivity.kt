@@ -1,21 +1,19 @@
 package com.example.covid19.views
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.covid19.R
-import com.example.covid19.entity.Countries
 import com.example.covid19.entity.Country
 import com.example.covid19.entity.CountryItem
-import com.example.covid19.entity.Covid
-import com.example.covid19.repository.RequestCountries
 import com.example.covid19.repository.RequestCountry
-import com.example.covid19.viewModel.CountriesViewModel
 import com.example.covid19.viewModel.CountryViewModel
 import com.example.covid19.views.CountriesViewHolder.Companion.COUNTRY_NAME_EXTRA
-import kotlinx.android.synthetic.main.activity_countries.*
 import kotlinx.android.synthetic.main.activity_country.*
+
 
 class CountryActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +29,13 @@ class CountryActivity : AppCompatActivity() {
         val adapter = CountryAdapter()
 
 
+        val itemDecorator =
+            DividerItemDecoration(this, DividerItemDecoration.VERTICAL)
+        itemDecorator.setDrawable(ContextCompat.getDrawable(this, R.drawable.divider)!!)
+
+        countryRecyclerView.addItemDecoration(
+            itemDecorator
+        )
         countryRecyclerView.layoutManager = layoutManager
         countryRecyclerView.adapter = adapter
 
