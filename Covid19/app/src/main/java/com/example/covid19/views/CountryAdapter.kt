@@ -31,7 +31,7 @@ class CountryAdapter() :
 
     fun updateList(list: List<CountryViewModel>) {
         countryList.clear()
-        list.sortedWith(compareBy { it.date })
+        list.sortedByDescending { it.date}
         countryList.addAll(list)
         notifyDataSetChanged()
     }
