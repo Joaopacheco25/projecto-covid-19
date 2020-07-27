@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="25dp"
 
     tools:context="com.example.covid19.views.MainActivity">
 
@@ -37,7 +37,7 @@
         android:layout_width="121dp"
         android:layout_height="17dp"
         android:layout_marginTop="24dp"
-        android:text="Total Confirmed"
+        android:text="Total Confirmed: "
         android:textColor="@color/cardview_dark_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.055"
@@ -49,7 +49,7 @@
         android:layout_width="121dp"
         android:layout_height="17dp"
         android:layout_marginTop="24dp"
-        android:text="New Deaths"
+        android:text="New Deaths: "
         android:textColor="@color/cardview_dark_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.055"
@@ -61,7 +61,7 @@
         android:layout_width="121dp"
         android:layout_height="17dp"
         android:layout_marginTop="24dp"
-        android:text="Total Deaths"
+        android:text="Total Deaths: "
         android:textColor="@color/cardview_dark_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.055"
@@ -73,7 +73,7 @@
         android:layout_width="121dp"
         android:layout_height="17dp"
         android:layout_marginTop="24dp"
-        android:text="New Recovered"
+        android:text="New Recovered: "
         android:textColor="@color/cardview_dark_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.055"
@@ -85,7 +85,7 @@
         android:layout_width="121dp"
         android:layout_height="17dp"
         android:layout_marginTop="24dp"
-        android:text="Total Recovered"
+        android:text="Total Recovered: "
         android:textColor="@color/cardview_dark_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.055"
@@ -95,16 +95,16 @@
     <Button
         android:id="@+id/countries_btn"
         style="@style/Widget.MaterialComponents.Button"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:text="Countries"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintHorizontal_bias="0.524"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/total_recovered_global"
-        app:layout_constraintVertical_bias="0.969" />
+        app:layout_constraintVertical_bias="0.485" />
 
     <TextView
         android:id="@+id/new_confirmed_global"
@@ -180,11 +180,12 @@
 
     <TextView
         android:id="@+id/textView7"
+        style="?attr/textAppearanceHeadline5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:text="World Numbers"
         android:textColor="@color/design_default_color_on_secondary"
-        android:layout_marginTop="5dp"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.051"

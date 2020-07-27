@@ -18,9 +18,10 @@ import kotlin.collections.ArrayList
 class CountriesAdapter() :
     RecyclerView.Adapter<CountriesViewHolder>(), Filterable {
 
-    private var countryFilterList = ArrayList<CountriesViewModel>()
+    private var countryFilterList = ArrayList<CountriesViewModel>() //ListUsedToFilter
 
-    private var countriesList: ArrayList<CountriesViewModel> = ArrayList<CountriesViewModel>()
+    private var countriesList: ArrayList<CountriesViewModel> =
+        ArrayList<CountriesViewModel>() //List with all countries to avoid another call to api after filter the list
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CountriesViewHolder {
         val view =

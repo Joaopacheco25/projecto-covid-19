@@ -14,10 +14,15 @@ import com.example.covid19.repository.RequestCountry
 import com.example.covid19.viewModel.CountriesViewModel
 import com.example.covid19.viewModel.CountryViewModel
 import com.example.covid19.views.CountriesViewHolder.Companion.COUNTRY_NAME_EXTRA
+import com.google.gson.internal.bind.util.ISO8601Utils.format
 import kotlinx.android.synthetic.main.activity_countries.*
 import kotlinx.android.synthetic.main.activity_country.*
+import java.text.SimpleDateFormat
+import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
+import java.util.*
+import java.util.logging.SimpleFormatter
 
 class CountryActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,8 +57,10 @@ class CountryActivity : AppCompatActivity() {
     }
 
     private fun toCountryViewModel(country: CountryItem): CountryViewModel {
+        val formatter = SimpleDateFormat("yyyy-MM-dd")
+        val mDate = formatter.format(country.Date)
         return CountryViewModel(
-            date = dateTimeStrToLocalDateTime,
+            date = mDate,
             active = country.Active,
             confirmed = country.Confirmed,
             deaths = country.Deaths,
