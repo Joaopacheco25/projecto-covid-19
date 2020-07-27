@@ -24,7 +24,7 @@
         android:id="@+id/textView"
         android:layout_width="121dp"
         android:layout_height="17dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="20dp"
         android:text="New Cases"
         android:textColor="@color/cardview_dark_background"
         app:layout_constraintEnd_toEndOf="parent"
@@ -110,11 +110,11 @@
         android:id="@+id/new_confirmed_global"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="20dp"
         android:text="0"
         android:textColor="@color/cardview_dark_background"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.107"
+        app:layout_constraintHorizontal_bias="0.109"
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 

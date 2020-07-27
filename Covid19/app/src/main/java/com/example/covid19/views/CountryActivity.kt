@@ -16,6 +16,8 @@ import com.example.covid19.viewModel.CountryViewModel
 import com.example.covid19.views.CountriesViewHolder.Companion.COUNTRY_NAME_EXTRA
 import kotlinx.android.synthetic.main.activity_countries.*
 import kotlinx.android.synthetic.main.activity_country.*
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 
 class CountryActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,12 +48,12 @@ class CountryActivity : AppCompatActivity() {
     }
 
     private fun toCountryViewModelList(country: Country): List<CountryViewModel> {
-        return country.map { raw -> toCountryViewModel(raw) }
+        return country.map { raw -> toCountryViewModel(raw) }.asReversed()
     }
 
     private fun toCountryViewModel(country: CountryItem): CountryViewModel {
         return CountryViewModel(
-            date = country.Date,
+            date = dateTimeStrToLocalDateTime,
             active = country.Active,
             confirmed = country.Confirmed,
             deaths = country.Deaths,
