@@ -16,8 +16,8 @@ class CountryAdapter() :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CountryViewHolder {
         val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.country_item, parent, false);
-        return CountryViewHolder(view);
+            LayoutInflater.from(parent.context).inflate(R.layout.country_item, parent, false)
+        return CountryViewHolder(view)
     }
 
     override fun getItemCount(): Int =
@@ -31,7 +31,6 @@ class CountryAdapter() :
 
     fun updateList(list: List<CountryViewModel>) {
         countryList.clear()
-        list.sortedByDescending { it.date}
         countryList.addAll(list)
         notifyDataSetChanged()
     }
@@ -46,7 +45,6 @@ class CountryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     fun bind(viewEntity: CountryViewModel) {
         countryActive.text = viewEntity.active.toString()
-        //  countryDate.text = LocalDate.parse(viewEntity.date).toString()
         countryDate.text = (viewEntity.date)
         countryDeaths.text = viewEntity.deaths.toString()
         countryNewConfirmed.text = viewEntity.confirmed.toString()

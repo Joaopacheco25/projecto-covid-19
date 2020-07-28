@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Covid Tracker</string>
+    <string name="app_name">Covid Status</string>
+    <string name="world_numbers">World Numbers</string>
+    <string name="total_recovered">Total Recovered</string>
+    <string name="new_recovered">New Recovered</string>
+    <string name="total_deaths">Total Deaths</string>
+    <string name="new_deaths">New Deaths</string>
 </resources>

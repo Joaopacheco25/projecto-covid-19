@@ -15,21 +15,21 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
-        override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?) {
 
-            super.onCreate(savedInstanceState)
-            setContentView(R.layout.activity_main)
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
-            val requestCountries = RequestCountries(
-                success = { covid ->  toGlobalViewModel(covid)},
-                failure = { throwable ->
-                    Toast.makeText(this, throwable.message, Toast.LENGTH_LONG).show()
-                }
-            )
-            requestCountries.getCountries()
+        val requestCountries = RequestCountries(
+            success = { covid -> toGlobalViewModel(covid) },
+            failure = { throwable ->
+                Toast.makeText(this, throwable.message, Toast.LENGTH_LONG).show()
+            }
+        )
+        requestCountries.getCountries()
 
-            countries_btn.setOnClickListener { goToCountriesActivity() }
-        }
+        countries_btn.setOnClickListener { goToCountriesActivity() }
+    }
 
     private fun toGlobalViewModel(country: Covid) {
         val newcases = findViewById<TextView>(R.id.new_confirmed_global)
