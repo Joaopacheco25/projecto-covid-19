@@ -1,7 +1,5 @@
 package com.example.covid19.viewModel
 
-import java.util.*
-
 data class CountryViewModel(
     val confirmed: Int,
     val deaths: Int,

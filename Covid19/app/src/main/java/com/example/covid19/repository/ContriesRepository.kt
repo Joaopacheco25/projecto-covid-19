@@ -11,6 +11,6 @@ class RequestCountries(
     fun getCountries(){
         val call = ClientApi.managersApi().get(auth = "Basic Auth")
         val callBack = GenericCallback(success, failure)
-        call.enqueue(callBack);
+        call.enqueue(callBack)
     }
 }

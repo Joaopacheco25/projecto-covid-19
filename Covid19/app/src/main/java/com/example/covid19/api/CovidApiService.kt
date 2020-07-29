@@ -10,6 +10,11 @@ import retrofit2.Retrofit
 
      object ClientApi {
 
+         fun managersApi(): CallServices {
+             return retrofit.create(
+                 CallServices::class.java)
+         }
+
          private val retrofit: Retrofit =
              retrofit()
 
@@ -29,10 +34,5 @@ import retrofit2.Retrofit
                  .addConverterFactory(GsonConverterFactory.create(Gson()))
                  .client(okHttpClient())
                  .build()
-         }
-
-         fun managersApi(): CallServices {
-             return retrofit.create(
-                 CallServices::class.java)
          }
     }

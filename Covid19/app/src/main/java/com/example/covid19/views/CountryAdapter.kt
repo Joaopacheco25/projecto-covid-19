@@ -7,9 +7,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.covid19.R
 import com.example.covid19.viewModel.CountryViewModel
-import java.time.LocalDate
 
-class CountryAdapter() :
+class CountryAdapter :
     RecyclerView.Adapter<CountryViewHolder>() {
 
     private var countryList = ArrayList<CountryViewModel>()
@@ -22,7 +21,6 @@ class CountryAdapter() :
 
     override fun getItemCount(): Int =
         countryList.size
-
 
     override fun onBindViewHolder(holder: CountryViewHolder, position: Int) {
         val item = countryList[position]

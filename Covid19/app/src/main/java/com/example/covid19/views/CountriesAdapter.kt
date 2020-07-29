@@ -15,13 +15,13 @@ import java.util.*
 import kotlin.collections.ArrayList
 
 
-class CountriesAdapter() :
+class CountriesAdapter :
     RecyclerView.Adapter<CountriesViewHolder>(), Filterable {
 
     private var countryFilterList = ArrayList<CountriesViewModel>() //ListUsedToFilter
 
     private var countriesList: ArrayList<CountriesViewModel> =
-        ArrayList<CountriesViewModel>() //List with all countries to avoid another call to api after filter the list
+        ArrayList() //List with all countries to avoid another call to api after filter the list
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CountriesViewHolder {
         val view =
@@ -80,16 +80,16 @@ class CountriesAdapter() :
 class CountriesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     private val countryName = itemView.findViewById<TextView>(R.id.countries_name)
     private val newCases = itemView.findViewById<TextView>(R.id.countries_new_cases)
-    private val btnDetails = itemView.findViewById<Button>(R.id.btn_details);
+    private val btnDetails = itemView.findViewById<Button>(R.id.btn_details)
 
     fun bind(viewEntity: CountriesViewModel) {
         countryName.text = viewEntity.country
         newCases.text = viewEntity.newConfirmed.toString()
-        btnDetails.setOnClickListener(View.OnClickListener {
+        btnDetails.setOnClickListener {
             val intent = Intent(itemView.context, CountryActivity::class.java)
             intent.putExtra(COUNTRY_NAME_EXTRA, viewEntity.country)
             itemView.context.startActivity(intent)
-        })
+        }
     }
 
     companion object {
